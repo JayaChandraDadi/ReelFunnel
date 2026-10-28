@@ -1,0 +1,65 @@
+{
+  "retrieval": {
+    "popularity": {
+      "recall@50": 0.0511,
+      "recall@200": 0.1494,
+      "recall@500": 0.2994,
+      "ndcg@50": 0.0451
+    },
+    "item_cf": {
+      "recall@50": 0.0851,
+      "recall@200": 0.196,
+      "recall@500": 0.3488,
+      "ndcg@50": 0.0755
+    },
+    "two_tower_hnsw": {
+      "recall@50": 0.174,
+      "recall@200": 0.4003,
+      "recall@500": 0.6078,
+      "ndcg@50": 0.1498
+    },
+    "two_tower_exact": {
+      "recall@50": 0.174,
+      "recall@200": 0.4004,
+      "recall@500": 0.6078,
+      "ndcg@50": 0.1498
+    },
+    "hnsw_vs_exact_recall@100": 1.0,
+    "hnsw_ms_per_query": 0.417,
+    "eval_users": 1500
+  },
+  "ranking": {
+    "test_rows": 6791,
+    "test_is_random_exposure": true,
+    "positive_rate": 0.2076,
+    "auc_dcn": 0.8514,
+    "gauc_dcn": 0.8598,
+    "logloss_dcn": 0.3735,
+    "auc_two_tower_score_only": 0.7783
+  },
+  "ranking_stage": {
+    "users": 1500,
+    "impressions": 134780,
+    "ndcg@10_dcn_v2": 0.9334,
+    "ndcg@10_two_tower_score": 0.8798,
+    "ndcg@10_video_long_view_rate": 0.8186,
+    "ndcg@10_random": 0.4855,
+    "dcn_lift_over_two_tower_order": "+6.1%"
+  },
+  "timings_s": {
+    "load": 1.5,
+    "history": 2.6,
+    "train_two_tower": 26.8,
+    "eval_retrieval": 16.3,
+    "daily_user_embeddings": 50.9,
+    "ranker_features": 1.2,
+    "train_ranker": 23.0,
+    "eval_ranking_stage": 2.5
+  },
+  "data": {
+    "rows": 945195,
+    "users": 1500,
+    "videos": 4000,
+    "days": 21
+  }
+}
